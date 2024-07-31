@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/scripts.js" defer></script>
+    <title>Gerador de Senhas</title>
+</head>
+<body>
+    <div id="register-container">
+        <div id="register-banner">
+            <div id="banner-layer">
+                <h4>4R Autopeças</h4>
+                <div id="banner-title">
+                    <h1>Seja <br> Bem <br> Vindo!</h1>
+                    <p>A maior do Brasil em peças automotivas.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="register-form">
+            <div id="register-title">
+                <h2>Registre-se</h2>
+                <p>Seja um cliente 4R e tenha ofertas exclusivas em peças e acessórios para seu veículo.</p>
+            </div>
+
+            <div class="form-control">
+                <label for="name">Nome</label>
+                <input type="text" name="name" id="name" placeholder="Qual seu nome?">
+            </div>
+
+            <div class="form-control">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Informe seu email...">
+            </div>
+
+            <div class="form-control">
+                <label for="password">Senha</label>
+                <input type="password" name="password" id="password" placeholder="Crie uma senha...">
+            </div>
+
+            <p id="gen-pass">Precisa de ajuda para criar uma senha segura? <span id="generate-password">Clique aqui!</span></p>
+
+            <div id="generate-options" class="hide">
+                <h3>Selecione as opções que deseja</h3>
+                <div class="generate-form-control">
+                    <label for="lenght">Quantidades de caracteres</label>
+                    <input type="number" name="lenght" id="lenght" value="10">
+                </div>
+                <div class="generate-form-control">
+                    <label for="letters">Letras</label>
+                    <input type="checkbox" name="letters" id="letters" checked>
+                </div>
+                <div class="generate-form-control">
+                    <label for="numbers">Números</label>
+                    <input type="checkbox" name="numbers" id="numbers" checked>
+                </div>
+                <div class="generate-form-control">
+                    <label for="symbols">Simbolos</label>
+                    <input type="checkbox" name="symbols" id="symbols" checked>
+                </div>
+                <button id="create-password">Criar Senha</button>
+            </div>
+
+            <div id="generated-password" title="Clique para copiar" class="">
+                <p>Aqui está sua senha:</p>
+                <h4></h4>
+            </div>
+
+            <div class="form-control">
+                <label for="confirm-password">Confirmação de senha</label>
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confime sua senha...">
+            </div>
+
+            <input type="submit" value="Cadastrar">
+        </div>
+    </div>
+</body>
+</html>

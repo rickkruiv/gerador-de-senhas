@@ -1,0 +1,236 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+    background-color: #EFEFEF;
+    height: auto;
+    min-height: 100vh;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input:focus {
+    outline: none;
+}
+
+#register-container {
+    max-width: 900px;
+    min-height: 680px;
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+    transition: .4s;
+    margin: 2rem;
+}
+
+#register-banner {
+    width: 45%;
+    background-image: url(https://i.pinimg.com/originals/ba/b8/65/bab8650cd19efe2416b25e755e7035aa.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    transition: .4s;
+}
+
+#banner-layer {
+    background-color: rgba(51, 51, 51, 0.4);
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#banner-layer h4 {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    border-left: 3px solid #d3d3d3;
+    padding-left: .5rem;
+}
+
+#banner-title h1 {
+    font-size: 4rem;
+    line-height: 3.5rem;
+}
+
+#banner-layer p {
+    font-size: 1rem;
+}
+
+#register-form {
+    background-color: #fff;
+    padding: 2rem;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+#register-title {
+    margin-bottom: 1rem;
+}
+
+#register-title h2 {
+    font-size: 3rem;
+    margin-bottom: .5rem;
+}
+
+.form-control {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: .5rem;
+}
+
+.form-control input {
+    border-radius: 10px;
+    border: 1px solid #c4c4c4;
+    padding: 1rem 1.2rem;
+}
+
+#register-form label {
+    font-weight: bold;
+    margin-bottom: .4rem;
+}
+
+#register-form input[type='submit']{
+    background-color: #EE6C7D;
+    border: 2px solid #EE6C7D;
+    border-radius: 15px;
+    padding: .8rem 1rem;
+    margin-top: 1rem;
+    color: #fff;
+    font-weight: bold;
+    align-self: flex-end;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#register-form input[type='submit']:hover, 
+#create-password:hover {
+    background-color: transparent;
+    color: #EE6C7D;
+}
+
+#generated-password {
+    border: 1px solid #EE6C7D;
+    border-radius: 10px;
+    margin-bottom: .5rem;
+    padding: .5rem;
+    text-align: center;
+    cursor: pointer;
+    font-size: .8rem;
+        display: none;
+}
+
+#gen-pass {
+    font-size: .8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#generate-password {
+    color: #EE6C7D;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#generate-password:hover {
+    text-decoration: underline;
+}
+
+#generate-options {
+    border-radius: 10px;
+    border: 1px solid #EE6C7D;
+    padding: .5rem;
+    margin-bottom: .5rem;
+    flex-direction: column;
+    display: flex;
+}
+
+.generate-form-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#generate-options h3 {
+    padding-bottom: .5rem;
+    text-align: center;
+}
+
+.generate-form-control input[type='number'] {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #c4c4c4;
+    font-size: .8rem;
+}
+
+#create-password {
+    background-color: #EE6C7D;
+    border: 2px solid #EE6C7D;
+    padding: .3rem 1rem;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: .5rem;
+}
+
+.generate-form-control input[type='number']::-webkit-inner-spin-button {
+    display: none;
+}
+
+.generate-form-control input[type='number']::-webkit-outer-spin-button {
+    display: none;
+}
+
+.generate-form-control input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    margin-right: 2.5px;
+}
+
+#generated-password.copied p, #generated-password.copied h4 {
+    opacity: .1;
+    transition: .4s;
+}
+
+.copied {
+    overflow: hidden;
+    position: relative;
+    transition: .4s;
+}
+
+.copied::before {
+    content: 'Copiado!';
+    background: #EE6C7D;
+    opacity: .6;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: .4s;
+}
+
+.hide {
+    display: none !important;
+}
